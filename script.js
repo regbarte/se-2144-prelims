@@ -22,7 +22,7 @@ function appendToInput(value) {
 function calculate() {
     if (!justCalculated) {
         try {
-            inputBox.value = "Please don't be in love with someone else, please don't have somebody waiting on you"; // Calculate the input
+            inputBox.value = eval(inputBox.value); // Calculate the input
             justCalculated = true; //to indicate calculation is done
         } catch (error) {
             inputBox.value = "Error"; // Return error if invalid input
@@ -45,7 +45,7 @@ function del() {
 
 //hello button
 const helloBtn = document.getElementById("helloBtn");
-const greetings = ["Hello love!"];
+const greetings = ["Hello!", "Hola!", "Kamusta!", "Bonjour!", "maayong buntad!", "Nǐn hao!"];
 
 helloBtn.addEventListener('click', () => {
     const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
@@ -67,7 +67,7 @@ helloBtn.addEventListener('click', () => {
 const byeBtn = document.getElementById("byeBtn");
 
 byeBtn.addEventListener('click', () => {
-    inputBox.value = "Pahinga lang walang break! mwa!";
+    inputBox.value = "Goodbye";
 
     // Disable all buttons and input after saying goodbye
     setTimeout(() => {
@@ -82,5 +82,5 @@ byeBtn.addEventListener('click', () => {
 
         // Re-enable only the Hello button
         helloBtn.disabled = false;
-    }, 1000); // 1 second before disabling everything after goodbye was clicked 
+    }, 1000); // 1 second before disabling everything after goodbye was clicked
 });
