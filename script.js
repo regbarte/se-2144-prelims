@@ -58,7 +58,7 @@ function del() {
 // Hello button functionality
 const helloBtn = document.getElementById("helloBtn");
 const ACBtn = document.getElementById("clearBtn");
-const greetings = ["Hello!", "Hola!", "Kamusta!", "Bonjour!", "maayong buntad!", "Nǐn hao!"];
+const greetings = ["Hello!", "Hola!", "Kamusta!", "Bonjour!", "maayong buntag!", "Nǐn hao!"];
 
 ACBtn.addEventListener('click',()=>{
     if (!isOn) {
