@@ -129,4 +129,8 @@ byeBtn.addEventListener("click", () => {
     // enable only the AC button
     ACBtn.disabled = false;
   }, 1000); // 1 second display of goodbye message before disabling everything except the AC
+
+  setTimeout(() =>{
+    inputBox.value = "";
+  }, 1500);
 });
